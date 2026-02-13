@@ -1,0 +1,37 @@
+.header {
+  max-width: 1200px; /*Por ser um site pequeno em conteúdo, não precisa se muito grande a largura, ele para de crescer*/
+  padding: 40px 20px;
+  display: flex; /*Um item ao lado do outro*/
+  margin: 0 auto; /*Após usar a largura máxima, agora alinhar sempre ao centro o itens, lembre-se item de bloco*/
+  justify-content: space-between; /*Dá aquele espaço em branco entre esses itens*/
+  align-items: center;
+}
+
+.header-nav {
+  display: flex; /*Um item ao lado do outro*/
+  flex-wrap: wrap; /*Se diminuir a tela, ele quebra tipo se fosse responsivo*/
+  gap: 10px;
+  justify-content: center; /*Os links começaram a ira para o lado esquedro na parte responsiva*/
+}
+
+.header-nav a {
+  font-size: 1.125rem;
+  line-height: 1.3;
+  padding: 10px 20px; /*É bom colocar padding porque no celular a área fica melhor clicavel*/
+  text-decoration: none;
+  color: #141414;
+  display: block;
+}
+
+/*Parte responsiva já pode ser feita, não precisa terminar o Site, acho que é até melhor na real*/
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column; /*Muda a orientação, antes era linha, agora é coluna, o titulo fica acima dos "links"*/
+    gap: 40px;
+    padding: 20px; /*tava um pouco grande a aprte branca de cima do título*/
+  }
+  .header a {
+    background: #f5f5f5; /*No celular, deixa parecendo um botão, melhor para clicar*/
+    border-radius: 4px;
+  }
+}
